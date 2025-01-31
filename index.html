@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" bg-white text-black">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pawfact</title>
     <!-- Styles library -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/32a386a3e6.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,28 +26,31 @@
     </style>
   </head>
   <body class="adlam-display-regular">
-    <header>
-      <nav class="flex justify-between items-center">
-        <div class="flex">
-          <img src="assets/logo-header.png" alt="Pawfact Logo" />
-          <h1>Pawfact</h1>
+    <header class="px-4 md:px-6">
+      <nav class="flex justify-between items-center lg:px-8 border-b-2 border-black-200 lg:border-hidden">
+        <div class="flex justify-between items-center gap-2">
+          <img class="w-8" src="assets/logo-header.png" alt="Pawfact Logo" />
+          <h1 class="hidden lg:flex">Pawfact</h1>
         </div>
-        <div>
-            <ul class="flex justify-between">
-                <li>Find a pet</li>
-                <li>Breeds</li>
-                <li>Contact us</li>
-            </ul>
+        <div class="hidden lg:flex">
+          <ul class="flex justify-between gap-4">
+            <li class="font-thin text-black-100">Find a pet</li>
+            <li class="font-thin text-black-100">Breeds</li>
+            <li class="font-thin text-black-100">Contact us</li>
+          </ul>
         </div>
-        <div>
-            <div>
-                <i class="fa-regular fa-bell"></i>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div>
-                <button>Log in</button>
-                <button>Register</button>
-            </div>
+        <div class="hidden lg:flex justify-between gap-2">
+          <div class="flex justify-between items-center gap-1">
+            <i class="fa-regular fa-bell text-base"></i>
+            <i class="fa-solid fa-magnifying-glass text-base"></i>
+          </div>
+          <div class="flex justify-between gap-2">
+            <button class="btn btn-sm bg-white border-yellow-300 text-black text-1xl font-thin">Log in</button>
+            <button class="btn btn-sm bg-yellow-300 border-yellow-300 text-black text-1xl font-thin">Register</button>
+          </div>
+        </div>
+        <div class="lg:hidden text-base">
+            <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
       <section></section>
