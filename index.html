@@ -1,59 +1,126 @@
 <!DOCTYPE html>
-<html lang="en" class=" bg-white text-black">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pawfact</title>
+    
     <!-- Styles library -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- FontAwesome -->
-    <script
-      src="https://kit.fontawesome.com/32a386a3e6.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/32a386a3e6.js" crossorigin="anonymous"></script>
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet" />
+    
     <style>
       .adlam-display-regular {
         font-family: "ADLaM Display", serif;
       }
     </style>
   </head>
-  <body class="adlam-display-regular">
-    <header class="px-4 md:px-6">
-      <nav class="flex justify-between items-center lg:px-8 border-b-2 border-black-200 lg:border-hidden">
-        <div class="flex justify-between items-center gap-2">
-          <img class="w-8" src="assets/logo-header.png" alt="Pawfact Logo" />
-          <h1 class="hidden lg:flex">Pawfact</h1>
+<body class="bg-yellow-50 font-sans adlam-display-regular text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="flex items-center space-x-2">
+                <img src="assets/logo-header.png" alt="Logo" class="w-8 h-8">
+                <h1 class="text-lg font-bold text-yellow-500">Browse<span class="text-gray-700">4Pets</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#" class="text-gray-600 hover:text-yellow-500">Find a pet</a>
+                <a href="#" class="text-gray-600 hover:text-yellow-500">Breeds</a>
+                <a href="#" class="text-gray-600 hover:text-yellow-500">Contact us</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <button class="btn btn-outline btn-sm">Login</button>
+                <button class="btn btn-primary btn-sm">Register</button>
+            </div>
+            <button class="md:hidden btn btn-ghost btn-square">
+                <svg xmlns="ass" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
-        <div class="hidden lg:flex">
-          <ul class="flex justify-between gap-4">
-            <li class="font-thin text-black-100">Find a pet</li>
-            <li class="font-thin text-black-100">Breeds</li>
-            <li class="font-thin text-black-100">Contact us</li>
-          </ul>
-        </div>
-        <div class="hidden lg:flex justify-between gap-2">
-          <div class="flex justify-between items-center gap-1">
-            <i class="fa-regular fa-bell text-base"></i>
-            <i class="fa-solid fa-magnifying-glass text-base"></i>
-          </div>
-          <div class="flex justify-between gap-2">
-            <button class="btn btn-sm bg-white border-yellow-300 text-black text-1xl font-thin">Log in</button>
-            <button class="btn btn-sm bg-yellow-300 border-yellow-300 text-black text-1xl font-thin">Register</button>
-          </div>
-        </div>
-        <div class="lg:hidden text-base">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-      </nav>
-      <section></section>
     </header>
-  </body>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto text-center p-8">
+        <h2 class="text-3xl font-bold mb-4">Pamper Your Pet, Because They Deserve the Best</h2>
+        <p class="text-gray-600 mb-6">Discover a world of treats, toys, and essentials meticulously crafted for your beloved pet. Spoil them with love and care!</p>
+        <img src="assets/cat-big.png" alt="Hero Pet" class="mx-auto rounded-lg">
+    </section>
+
+    <!-- Categories Section -->
+    <section>
+        <h3 class="text-xl font-bold mb-4 text-center">Browse By Categories</h3>
+        <div class="grid grid-cols-2 gap-4 lg:grid-cols-6">
+          <div class="bg-yellow-300">
+            <img src="assets/cat-cartoon.png" alt="">
+            <h6>Cat</h6>
+            <p>3 items</p>
+          </div>
+          <div class="bg-yellow-300">
+            <img src="assets/fish-cartoon.png" alt="">
+            <h6>Fish</h6>
+            <p>3 items</p>
+          </div>
+          <div class="bg-yellow-300">
+            <img src="assets/dog-cartoon.png" alt="">
+            <h6>Dog</h6>
+            <p>3 items</p>
+          </div>
+          <div class="bg-yellow-300">
+            <img src="assets/bird-cartoon.png" alt="">
+            <h6>Birds</h6>
+            <p>3 items</p>
+          </div>
+          <div class="bg-yellow-300">
+            <img src="assets/mouse-cartoon.png" alt="">
+            <h6>Small Pet</h6>
+            <p>3 items</p>
+          </div>
+          <div class="bg-yellow-300">
+            <img src="assets/rabbit-cartoon.png" alt="">
+            <h6>Rabbit</h6>
+            <p>3 items</p>
+          </div>
+        </div>
+      </section>
+
+    <!-- Trending Products Section -->
+    <section class="bg-white py-8">
+        <div class="container mx-auto">
+            <h3 class="text-xl font-bold mb-4 text-center">Trending Pet Products</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="card shadow-md p-4 text-center">
+                    <img src="https://placekitten.com/150/150" alt="T-Shirt for Dogs" class="mx-auto">
+                    <h4 class="font-bold mt-2">T-Shirt for Dogs</h4>
+                    <button class="btn btn-primary btn-sm mt-4">Shop Now</button>
+                </div>
+                <div class="card shadow-md p-4 text-center">
+                    <img src="https://placekitten.com/150/150" alt="Pet Grooming Mitt" class="mx-auto">
+                    <h4 class="font-bold mt-2">Pet Grooming Mitt</h4>
+                    <p class="text-yellow-500 font-bold">$7.99</p>
+                </div>
+                <div class="card shadow-md p-4 text-center">
+                    <img src="https://placekitten.com/150/150" alt="T-Shirt for Dogs" class="mx-auto">
+                    <h4 class="font-bold mt-2">T-Shirt for Dogs</h4>
+                    <p class="text-yellow-500 font-bold">$7.59</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-yellow-100 py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-600">&copy; 2025 Browse Pets. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
